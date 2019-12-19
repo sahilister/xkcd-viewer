@@ -2,7 +2,7 @@
 Axios usage to fetch xkcd
 
 
-### [Live Version](https://xkcd-viewer-sahilister.netlify.com/) (in vanilla javascript)
+### [Live Version](https://xkcd-viewer-sahilister.netlify.com/) 
 
 ## Sources and References
 
