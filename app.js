@@ -7,20 +7,22 @@ let min = 1; //for rand
 var img_url;
 var title, edition;
 
+let info = document.getElementById("heading");
 var img = document.createElement("img"); //defined globally to be used in random gen
 
 
 axios.get(json_data)
     .then(res => {
         img_url = res.data.img;
-        console.log(res.data);
-        title = res.data.title;
-        edition = res.data.num;
-
         img.src = img_url;
         var src = document.getElementById("img1");
         src.appendChild(img);
         max = res.data.num; //maximun value for random xkcd generator
+
+        title = res.data.title;
+        edition = res.data.num;
+        info.textContent = `#${edition} ${title}`;
+
     });
 
 function randomImgGenerator() {
@@ -34,6 +36,10 @@ function randomImgGenerator() {
         img.src = img_url;
         var src = document.getElementById("img1");
         src.appendChild(img);
+
+        title = res.data.title;
+        edition = res.data.num;
+        info.textContent = `#${edition} ${title}`;
     });
 }
 
