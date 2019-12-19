@@ -1,7 +1,7 @@
 //homepage query, today's edition 
 const cors = 'https://nonanathi.herokuapp.com/';
 let url = 'https://xkcd.com/info.0.json';
-let json_data = `${cors}${url}`;
+let json_data = `${url}`;
 let max; //for rand
 let min = 1; //for rand
 var img_url;
